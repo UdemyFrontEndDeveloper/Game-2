@@ -8,11 +8,11 @@ class Game{
         text: "Rusinowa polana",
         categories: "Byliśmy w Tatrach w tym miejscu :D"
         },
-    quotes = [{
+    quotes = {
         text: "Afromentals",
         categories: "Zespół"
         },
-    quotes = [{
+    quotes = {
         text: "Swinica",
         categories: "Kiedyś wejdziemy tam razem w Tatrach :*"
         },
