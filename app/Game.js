@@ -6,7 +6,7 @@ class Game{
 
     quotes = [{
         text: "Rusinowa polana",
-        categories: "Piękne miejsce w Tatrach"
+        categories: "Byliśmy w Tatrach w tym miejscu :D"
         },
     {
         text: "Nauka tanca",
