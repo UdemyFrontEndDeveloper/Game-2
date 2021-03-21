@@ -10,7 +10,7 @@ class Game{
         },
     {
         text: "Afromentals",
-        categories: "Zespół"
+        categories: "Zespół muzyczny"
         },
     {
         text: "Swinica",
