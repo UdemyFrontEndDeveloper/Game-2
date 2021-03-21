@@ -8,11 +8,11 @@ class Game{
         text: "Rusinowa polana",
         categories: "Byliśmy w Tatrach w tym miejscu :D"
         },
-    quotes = {
+    {
         text: "Afromentals",
         categories: "Zespół"
         },
-    quotes = {
+    {
         text: "Swinica",
         categories: "Kiedyś wejdziemy tam razem w Tatrach :*"
         },
@@ -71,12 +71,12 @@ class Game{
     }
 
     winning() {
-        this.word.innerHTML = "GRATULACJE WYGRAŁEŚ";
+        this.word.innerHTML = "SUPER! Odgadnięte :D";
         this.letters.innerHTML = "";
     }
 
     losing(){
-        this.word.innerHTML = "NIESTETY PREZGRAŁEŚ";
+        this.word.innerHTML = "Blisko było.. Spróbuj ponownie";
         this.letters.innerHTML = "";
     }
 
