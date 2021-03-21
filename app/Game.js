@@ -8,6 +8,14 @@ class Game{
         text: "Rusinowa polana",
         categories: "Byliśmy w Tatrach w tym miejscu :D"
         },
+    quotes = [{
+        text: "Afromentals",
+        categories: "Zespół"
+        },
+    quotes = [{
+        text: "Swinica",
+        categories: "Kiedyś wejdziemy tam razem w Tatrach :*"
+        },
     {
         text: "Nauka tanca",
         categories: "Wspólne zajęcie"
