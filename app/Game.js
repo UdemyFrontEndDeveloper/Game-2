@@ -72,7 +72,6 @@ class Game{
         this.letters.innerHTML = "";
     }
 
-
     start(){
         document.getElementsByClassName("step")[this.currentStep].style.opacity = 1;
         this.creatingLetters();
