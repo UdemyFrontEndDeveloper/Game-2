@@ -2,6 +2,9 @@ import {Quote} from "./Quote.js"
 
 class Game{
 
+    currentStep = 0;
+    lastStep = 7;
+
     quotes=[{
         text: "bla bla bla",
         categoryQ: "siemano",
@@ -30,10 +33,17 @@ class Game{
         this.quote = new Quote(text.toLocaleLowerCase());
     }
 
-    guess(labelButton){
-        this.quote.guess(labelButton);
-        const content = this.quote.checkAndDisplay();
-       this.word.innerHTML = content;
+    guess(labelButton,e){
+        e.target.disabled = true;
+        if(this.quote.guess(labelButton)){
+        this.renderText();
+        }else{
+            this.currentStep++;
+            document.getElementsByClassName("step")[this.currentStep].style.opacity = 1;
+            if(this.currentStep == this.lastStep){
+                this.losing();
+            }
+        }
     }
 
     creatingLetters(){
@@ -42,7 +52,7 @@ class Game{
         // console.log(labelButton);
         const button = document.createElement("button");
         button.innerHTML = labelButton;
-        button.addEventListener("click", () => this.guess(labelButton));
+        button.addEventListener("click", (e) => this.guess(labelButton,e));
         this.letters.appendChild(button);
         }
     }
@@ -51,9 +61,23 @@ class Game{
     renderText(){
         const content = this.quote.checkAndDisplay();
        this.word.innerHTML = content;
+       if(!content.includes("_")){
+           this.winning();
+       }
+    }
+
+    winning(){
+        this.word.innerHTML = "Odgadłeś! Brawo";
+        this.letters.innerHTML = "";
+    }
+
+    losing(){
+        this.word.innerHTML = "Niestety nie odgadłeś, spróbuj jeszcze raz!";
+        this.letters.innerHTML = "";
     }
 
     start() {
+        document.getElementsByClassName("step")[this.currentStep].style.opacity = 1;
        this.creatingLetters();
        this.renderText();
     }
