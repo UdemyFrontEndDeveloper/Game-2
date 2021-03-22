@@ -27,11 +27,13 @@ class Game{
 
         const {text,categoryQ}= this.quotes[Math.floor(Math.random()*this.quotes.length)];
         this.category.innerHTML = categoryQ;
-        this.word.innerHTML = new Quote(text);
+        this.quote = new Quote(text.toLocaleLowerCase());
     }
 
     guess(labelButton){
-        console.log(labelButton)
+        this.quote.guess(labelButton);
+        const content = this.quote.checkAndDisplay();
+       this.word.innerHTML = content;
     }
 
     creatingLetters(){
@@ -45,8 +47,15 @@ class Game{
         }
     }
 
+
+    renderText(){
+        const content = this.quote.checkAndDisplay();
+       this.word.innerHTML = content;
+    }
+
     start() {
        this.creatingLetters();
+       this.renderText();
     }
 }
 
