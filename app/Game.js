@@ -5,8 +5,8 @@ class Game{
     lastStep = 7;
 
     quotes = [{
-        text: "Rusinowa polana",
-        categories: "Byliśmy w Tatrach w tym miejscu :D"
+        text: "WordPress",
+        categories: "Popularny system zarządzania treścią"
         },
     {
         text: "Afromentals",
@@ -14,15 +14,15 @@ class Game{
         },
     {
         text: "Swinica",
-        categories: "Kiedyś wejdziemy tam razem w Tatrach :*"
+        categories: "Sczyt w Tatrach"
         },
     {
-        text: "Nauka tanca",
-        categories: "Wspólne zajęcie"
+        text: "Cha cha",
+        categories: "Rodzaj tańca"
         },
     {
-        text: "Spontan for life",
-        categories: "Motto życiowe"
+        text: "Tomasz Karolak",
+        categories: "Znany celebryta"
     }];
 
     constructor({letters, category, word, output}){
